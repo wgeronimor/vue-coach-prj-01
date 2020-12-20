@@ -1,13 +1,13 @@
 <template>
   <li>
     <h3>{{ fullName }}</h3>
-    <h4>${{ rate }}</h4>
+    <h4>${{ rate }}/hour</h4>
     <div>
       <span v-for="area in areas" :key="area">{{ area }}</span>
     </div>
     <div class="actions">
-      <router-link :to="couchContactLink">Contact</router-link>
-      <router-link :to="couchDetailsLink">View Details</router-link>
+      <base-button mode="outline" link :to="couchContactLink">Contact</base-button>
+      <base-button link :to="couchDetailsLink">View Details</base-button>
     </div>
   </li>
 </template>
